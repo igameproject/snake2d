@@ -4,8 +4,12 @@ var xv = 50 ,yv = 50;
 var foodX,foodY;
 const BODY_SIZE = 20;
 const FOOD_SIZE = 10;
-var score = 0;
-
+var trail = [
+             
+             { x : xv + BODY_SIZE , y : yv },
+             { x : xv + BODY_SIZE* 2   , y : yv },
+             { x : xv + BODY_SIZE * 3  , y : yv } ];
+var length = 5;
 
 window.onload = () => {
   canvas = document.getElementById("mainGame");
@@ -16,13 +20,6 @@ window.onload = () => {
   // ctx.font="20px Arial";
   // ctx.fillText("Current Length : " + lengthOfSnake.toString() ,550,30);
 
-  //Designing a basic element of snake's body
-  // ctx.fillStyle = "#bada55" ;
-  // ctx.strokeStyle = "black";
-  // ctx.lineWidth="3";
-  // ctx.rect(xv,yv,20,20);
-  // ctx.fill()
-  // ctx.stroke();
   document.addEventListener('keydown',handleKeyDown);
   var framesPerSecond = 100;
   setInterval(mainGame,1000/framesPerSecond);
@@ -46,17 +43,27 @@ var mainGame = () => {
     ctx.fill();
   }
   else {    
-    score++;
+    length++;
+    for(var i = 0; i < 3; i++)
+      trail.unshift(trail[0]);
+
     //displaying it outside the screen until reset.A way of deleting food4
-    console.log(score);
+    console.log(length);
     foodX = -100;
     foodY = -100;
     
   }
 
   checkBoundaries();
+
+  //drawing snake bouderies
   ctx.fillStyle = "#bada55";
-  ctx.fillRect(xv,yv,BODY_SIZE,BODY_SIZE);
+  ctx.fillRect(xv,yv,BODY_SIZE - 2 ,BODY_SIZE - 2 );
+
+  //draw an array of rects
+  trail.forEach(function(elem,index){
+      ctx.fillRect(elem.x  ,elem.y,BODY_SIZE - 2,BODY_SIZE - 2)
+  })
   
   
   
@@ -120,19 +127,33 @@ var handleKeyDown = (evt) => {
     
     switch(evt.key){
       case "ArrowRight":
+        trail.pop();
+        trail.unshift({x : xv , y : yv });
+        console.log(trail);
         xv += BODY_SIZE ; 
+        
         break;
       
       case "ArrowLeft":
+        trail.unshift({x : xv , y : yv });
+        console.log(trail);
         xv -= BODY_SIZE ;
+        trail.pop();
         break;
     
       case "ArrowDown":
+        trail.pop();
+        trail.unshift({x : xv , y : yv });
+        console.log(trail);
         yv += BODY_SIZE;
+        
         break;
     
       case "ArrowUp":
+        trail.unshift({x : xv  , y : yv });
+        console.log(trail);
         yv -= BODY_SIZE; 
+        trail.pop();
         break;
 
       
