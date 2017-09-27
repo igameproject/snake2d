@@ -104,10 +104,10 @@ var collision = () => {
 
   }
   var foodBox={
-    x : foodX - FOOD_SIZE/2,
-    y : foodY - FOOD_SIZE/2,
-    width : FOOD_SIZE,
-    height : FOOD_SIZE
+    x : foodX - FOOD_SIZE,
+    y : foodY - FOOD_SIZE,
+    width : FOOD_SIZE*2,
+    height : FOOD_SIZE*2
 
   }
 
