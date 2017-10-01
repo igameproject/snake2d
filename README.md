@@ -12,3 +12,12 @@ If you find a way to improve the game that hasn't been mentioned in the issues. 
 
 * __Where can I get more help, if I need it?__
 You can contact the owner at techie.vigneshramesh@gmail.com
+
+## How to play
+
+Use arrow keys to control the snake. The more food (dots) you collect, the bigger your snake becomes.
+
+If you hit the head of your snake with any other part of it, then you will lose.
+
+![Snake 2d](https://i.gyazo.com/f3213390f78c38c46b4d27933a87a718.png)
+
