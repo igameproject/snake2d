@@ -12,3 +12,17 @@ If you find a way to improve the game that hasn't been mentioned in the issues. 
 
 * __Where can I get more help, if I need it?__
 You can contact the owner at techie.vigneshramesh@gmail.com
+
+* __How to play?__
+Don't run the snake into the wall, or his own tail: you die.
+Use your cursor keys: up, left, right, and down to control the snake. 
+Eat the colored dots to gain points and collecting more dots will result in increment in the size of the snake.
+Higher (and faster) play levels award more points.
+
+
+## Playing Screenshot
+
+![how-to-play](asset/snake2d.png)
+
+
+
