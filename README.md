@@ -12,3 +12,12 @@ If you find a way to improve the game that hasn't been mentioned in the issues. 
 
 * __Where can I get more help, if I need it?__
 You can contact the owner at techie.vigneshramesh@gmail.com
+
+## How to play
+
+Use arrow keys to control the snake. The more food (dots) you collect, the bigger your snake becomes.
+
+The score will be reset if you eat any part of your body.The more you eat the higher your score.
+
+
+![how-to-play](assets/snake2d.png)
