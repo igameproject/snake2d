@@ -17,6 +17,7 @@ You can contact the owner at techie.vigneshramesh@gmail.com
 
 Use arrow keys to control the snake. The more food (dots) you collect, the bigger your snake becomes.
 
-If you hit the head of your snake with any other part of it, you will lose.
+The score will be reset if you eat any part of your body.The more you eat the higher your score.
+
 
 ![how-to-play](assets/snake2d.png)
