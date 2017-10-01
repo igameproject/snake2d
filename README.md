@@ -1,4 +1,4 @@
-#Sanke 2d
+# Snake 2d
 
 * __What does this project do?__
   This is Snake clone created using HTML5 and Javascript.
